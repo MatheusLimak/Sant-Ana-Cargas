@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Sant'Ana Cargas - Serviços completos para eventos: transporte, montagem, limpeza, organização e atendimento. Casamentos, festas corporativas, feiras e mais em São Paulo."
+    />
+    <title>Sant'Ana Cargas | Serviços para Eventos</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preload" href="styles.css" as="style" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lucide-static@latest/font/lucide.min.css" />
+    <script defer src="scripts.js"></script>
+  </head>
+  <body class="is-loading">
+    <div class="intro" id="intro" aria-hidden="true">
+      <!-- Linhas de rota dinâmicas -->
+      <div class="intro__routes">
+        <div class="route route--1"></div>
+        <div class="route route--2"></div>
+        <div class="route route--3"></div>
+        <div class="route route--4"></div>
+        <div class="route route--5"></div>
+        <div class="route route--6"></div>
+        <div class="route route--7"></div>
+        <div class="route route--8"></div>
+      </div>
+      
+      <!-- Pulso central -->
+      <div class="intro__pulse">
+        <span class="pulse-ring pulse-ring--1"></span>
+        <span class="pulse-ring pulse-ring--2"></span>
+        <span class="pulse-ring pulse-ring--3"></span>
+      </div>
+      
+      <!-- Partículas -->
+      <div class="intro__particles">
+        <span class="particle particle--1"></span>
+        <span class="particle particle--2"></span>
+        <span class="particle particle--3"></span>
+        <span class="particle particle--4"></span>
+        <span class="particle particle--5"></span>
+        <span class="particle particle--6"></span>
+        <span class="particle particle--7"></span>
+        <span class="particle particle--8"></span>
+        <span class="particle particle--9"></span>
+        <span class="particle particle--10"></span>
+        <span class="particle particle--11"></span>
+        <span class="particle particle--12"></span>
+      </div>
+      
+      <div class="intro__logo">
+        <img
+          src="Logo.png"
+          alt="Logo Sant'Ana Cargas"
+          width="440"
+          height="440"
+          class="intro__logo-img"
+        />
+      </div>
+    </div>
+
+    <canvas id="sceneCanvas" aria-hidden="true"></canvas>
+
+    <header class="main-header" data-animate="fade-down">
+      <nav class="desktop-nav" aria-label="Menu principal">
+        <a href="#servicos">Serviços</a>
+        <a href="#precos">Preços</a>
+        <a href="#contato">Contato</a>
+      </nav>
+      <button
+        class="menu-toggle"
+        id="menuToggle"
+        aria-label="Abrir menu lateral"
+        aria-expanded="false"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </header>
+
+    <aside class="side-menu" id="mobileMenu" aria-hidden="true">
+      <div class="side-menu__content">
+        <button class="close-menu" aria-label="Fechar menu lateral">
+          <span></span>
+          <span></span>
+        </button>
+        <nav aria-label="Menu lateral">
+          <a href="#marca">Início</a>
+          <a href="#sobre">Sobre</a>
+          <a href="#servicos">Serviços</a>
+          <a href="#precos">Preços</a>
+          <a href="#contato">Contato</a>
+        </nav>
+        <div class="side-menu__cta">
+          <p>Atendimento imediato via WhatsApp</p>
+          <a
+            class="btn btn-whatsapp"
+            data-whatsapp="principal"
+            href="https://wa.me/5511989488326"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Chamar agora
+          </a>
+        </div>
+      </div>
+    </aside>
+    </div>
+
+    <main>
+      <section class="hero stack-card" id="home" data-animate="fade-up">
+        <div class="hero__content">
+          <p class="eyebrow">Soluções completas para eventos em São Paulo e Grande SP</p>
+          <h1>Seu evento perfeito começa com a gente.</h1>
+          <p class="subtitle">
+            Transporte, montagem, limpeza, organização e atendimento — tudo o que você precisa para eventos corporativos, casamentos, feiras e confraternizações.
+          </p>
+          <div class="hero__actions">
+            <a
+              class="btn btn-primary"
+              data-whatsapp="principal"
+              href="https://wa.me/5511989488326"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Quero conhecer o serviço
+            </a>
+            <button class="btn btn-outline" data-scroll="#servicos">
+              Ver serviços
+            </button>
+          </div>
+          <div class="hero__metrics">
+            <article>
+              <strong>+500</strong>
+              <span>Eventos realizados</span>
+            </article>
+            <article>
+              <strong>100%</strong>
+              <span>Satisfação garantida</span>
+            </article>
+            <article>
+              <strong>24h</strong>
+              <span>Suporte dedicado</span>
+            </article>
+          </div>
+        </div>
+        <div class="hero__visual" aria-hidden="true">
+          <div class="visual-cube">
+            <span class="cube-face cube-face--front"></span>
+            <span class="cube-face cube-face--back"></span>
+            <span class="cube-face cube-face--top"></span>
+            <span class="cube-face cube-face--bottom"></span>
+            <span class="cube-face cube-face--left"></span>
+            <span class="cube-face cube-face--right"></span>
+          </div>
+          <div class="visual-hex-grid">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+      </section>
+
+      <section class="about stack-card" id="sobre" data-animate="scale-in">
+        <header>
+          <p class="eyebrow">Quem somos</p>
+          <h2>Parceiros de confiança para o sucesso do seu evento</h2>
+          <p>
+            Somos especialistas em serviços gerais para eventos. Do transporte à limpeza final, nossa equipe cuida de cada detalhe para que você foque apenas em aproveitar o momento.
+          </p>
+        </header>
+        <div class="about__grid">
+          <article>
+            <svg viewBox="0 0 64 64" role="img" aria-label="Experiência">
+              <path
+                d="M32 8l6 18h19l-15 11 6 19-16-12-16 12 6-19-15-11h19z"
+                stroke-width="3"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                fill="none"
+              ></path>
+            </svg>
+            <h3>Experiência</h3>
+            <p>Anos de atuação em eventos corporativos, casamentos, feiras e festas.</p>
+          </article>
+          <article>
+            <svg viewBox="0 0 64 64" role="img" aria-label="Equipe Completa">
+              <path
+                d="M20 24a6 6 0 1 0 0-12 6 6 0 0 0 0 12zM44 24a6 6 0 1 0 0-12 6 6 0 0 0 0 12zM32 56a6 6 0 1 0 0-12 6 6 0 0 0 0 12zM20 28v8l12 8M44 28v8l-12 8"
+                stroke-width="3"
+                stroke-linecap="round"
+                fill="none"
+              ></path>
+            </svg>
+            <h3>Equipe Completa</h3>
+            <p>Profissionais treinados para transporte, montagem, limpeza e atendimento.</p>
+          </article>
+          <article>
+            <svg viewBox="0 0 64 64" role="img" aria-label="Pontualidade">
+              <circle cx="32" cy="32" r="24" stroke-width="3" fill="none"></circle>
+              <path d="M32 16v18l12 8" stroke-width="3" stroke-linecap="round" fill="none"></path>
+            </svg>
+            <h3>Pontualidade</h3>
+            <p>Cronogramas rigorosos para garantir que tudo esteja pronto na hora certa.</p>
+          </article>
+          <article>
+            <svg viewBox="0 0 64 64" role="img" aria-label="Atendimento VIP">
+              <path
+                d="M32 8c-13 0-24 11-24 24s11 24 24 24 24-11 24-24S45 8 32 8zM24 28l6 6 10-10"
+                stroke-width="3"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                fill="none"
+              ></path>
+            </svg>
+            <h3>Atendimento VIP</h3>
+            <p>Suporte dedicado do planejamento à execução. Você é nossa prioridade.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="services stack-card" id="servicos" data-animate="fade-up">
+        <header>
+          <p class="eyebrow">Nossos Serviços</p>
+          <h2>Tudo para seu evento em um só lugar</h2>
+        </header>
+
+        <div class="services__grid">
+          <article class="service-card" data-service="Transporte para Eventos">
+            <i class="lucide lucide-truck service-icon" aria-hidden="true"></i>
+            <h3>Transporte para Eventos</h3>
+            <p>Levamos e buscamos tudo que seu evento precisa: móveis, equipamentos, decoração e materiais com total segurança.</p>
+            <a class="btn btn-link" data-whatsapp="Transporte para Eventos">Solicitar orçamento</a>
+          </article>
+
+          <article class="service-card" data-service="Montagem de Móveis e Estruturas">
+            <i class="lucide lucide-wrench service-icon" aria-hidden="true"></i>
+            <h3>Montagem de Móveis e Estruturas</h3>
+            <p>Montagem profissional de mesas, cadeiras, palcos, tendas, estandes e toda estrutura do seu evento.</p>
+            <a class="btn btn-link" data-whatsapp="Montagem de Móveis e Estruturas">Solicitar orçamento</a>
+          </article>
+
+          <article class="service-card" data-service="Limpeza Pré e Pós-Evento">
+            <i class="lucide lucide-sparkles service-icon" aria-hidden="true"></i>
+            <h3>Limpeza Pré e Pós-Evento</h3>
+            <p>Preparamos o espaço antes e deixamos tudo impecável depois. Você só se preocupa em celebrar.</p>
+            <a class="btn btn-link" data-whatsapp="Limpeza Pré e Pós-Evento">Solicitar orçamento</a>
+          </article>
+
+          <article class="service-card" data-service="Organização de Espaços">
+            <i class="lucide lucide-clipboard-list service-icon" aria-hidden="true"></i>
+            <h3>Organização de Espaços</h3>
+            <p>Disposição estratégica de móveis, sinalização, decoração e layout do ambiente conforme seu projeto.</p>
+            <a class="btn btn-link" data-whatsapp="Organização de Espaços">Solicitar orçamento</a>
+          </article>
+
+          <article class="service-card" data-service="Atendimento e Recepção">
+            <i class="lucide lucide-users service-icon" aria-hidden="true"></i>
+            <h3>Atendimento e Recepção</h3>
+            <p>Equipe treinada para recepcionar convidados, orientar fluxos e dar suporte durante todo o evento.</p>
+            <a class="btn btn-link" data-whatsapp="Atendimento e Recepção">Solicitar orçamento</a>
+          </article>
+
+          <article class="service-card" data-service="Pacote Completo para Eventos">
+            <i class="lucide lucide-award service-icon" aria-hidden="true"></i>
+            <h3>Pacote Completo</h3>
+            <p>Contrate todos os serviços em um único pacote personalizado. A solução mais prática e econômica.</p>
+            <a class="btn btn-link" data-whatsapp="Pacote Completo para Eventos">Solicitar orçamento</a>
+          </article>
+        </div>
+      </section>
+
+      <section class="pricing stack-card" id="precos" data-animate="fade-up">
+        <header>
+          <p class="eyebrow">Valores</p>
+          <h2>Orçamentos sob medida para cada evento</h2>
+        </header>
+        <div class="pricing__table">
+          <div>
+            <span>Transporte para Eventos</span>
+            <strong>A partir de R$ 150,00</strong>
+          </div>
+          <div>
+            <span>Montagem de Estruturas</span>
+            <strong>A partir de R$ 120,00</strong>
+          </div>
+          <div>
+            <span>Limpeza Pré/Pós-Evento</span>
+            <strong>A partir de R$ 200,00</strong>
+          </div>
+          <div>
+            <span>Organização de Espaços</span>
+            <strong>A partir de R$ 180,00</strong>
+          </div>
+          <div>
+            <span>Atendimento/Recepção</span>
+            <strong>R$ 80,00/hora</strong>
+          </div>
+          <div>
+            <span>Pacote Completo</span>
+            <strong>Sob consulta</strong>
+          </div>
+        </div>
+        <p class="pricing__note">
+          Valores de referência — cada evento é único! Solicite seu orçamento personalizado via WhatsApp.
+        </p>
+      </section>
+
+      <section class="trust stack-card" data-animate="scale-in">
+        <p>✨ Casamentos, formaturas, congressos, feiras ou festas corporativas — transformamos qualquer ocasião em um evento memorável.</p>
+      </section>
+
+      <section class="contact stack-card" id="contato" data-animate="fade-up">
+        <header>
+          <p class="eyebrow">Fale conosco</p>
+          <h2>Vamos planejar seu evento juntos?</h2>
+          <p>Solicite um orçamento sem compromisso. Nossa equipe está pronta para atender você!</p>
+        </header>
+        <div class="contact__actions">
+          <a
+            class="contact-card"
+            data-whatsapp="5511989488326"
+            href="https://wa.me/5511989488326"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <span>📲 11 98948-8326</span>
+            <strong>Suporte imediato</strong>
+          </a>
+          <a
+            class="contact-card"
+            data-whatsapp="5511913692230"
+            href="https://wa.me/5511913692230"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <span>📲 11 91369-2230</span>
+            <strong>Operações dedicadas</strong>
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>Sant'Ana Cargas — Seu evento, nossa missão.</p>
+      <small>Serviços completos para eventos em São Paulo e Grande SP.</small>
+    </footer>
+
+    <a
+      class="floating-whatsapp"
+      data-whatsapp="principal"
+      href="https://wa.me/5511989488326"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Conversar no WhatsApp"
+    >
+      <span>WhatsApp</span>
+    </a>
+  </body>
+</html>
+
