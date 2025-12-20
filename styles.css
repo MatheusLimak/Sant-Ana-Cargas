@@ -120,6 +120,34 @@ main {
   box-shadow: 0 25px 60px rgba(15, 35, 73, 0.12);
 }
 
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.portal-link {
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--cinza);
+  transition: color 0.3s ease;
+  opacity: 0.7;
+}
+
+.portal-link:hover {
+  color: var(--azul-profundo);
+  opacity: 1;
+}
+
+.portal-link-mobile {
+  margin-top: 8px;
+  padding-top: 8px;
+  border-top: 1px solid var(--cinza-linha);
+  font-size: 0.9rem;
+  opacity: 0.7;
+}
+
 .desktop-nav {
   display: none;
   gap: 24px;
@@ -1058,6 +1086,17 @@ footer {
   .menu-toggle {
     display: none;
   }
+
+  .portal-link {
+    display: block;
+  }
+}
+
+@media (max-width: 899px) {
+  .portal-link {
+    display: none;
+  }
+}
 
   .hero {
     grid-template-columns: repeat(2, minmax(0, 1fr));
