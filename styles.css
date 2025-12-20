@@ -1096,7 +1096,6 @@ footer {
   .portal-link {
     display: none;
   }
-}
 
   .hero {
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -1121,6 +1120,26 @@ footer {
   .stack-card {
     border-radius: 24px;
     padding: 28px;
+  }
+
+  .hero {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .hero__visual {
+    min-height: 200px;
+    order: 2;
+  }
+
+  .hero__content {
+    order: 1;
+  }
+
+  .visual-cube {
+    width: 150px;
+    height: 150px;
+    margin: 0 auto;
   }
 
   .floating-whatsapp {
