@@ -122,6 +122,22 @@
       display: block;
     }
 
+    .back-to-site {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      color: var(--cinza);
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 500;
+      margin-bottom: 16px;
+      transition: color 0.3s ease;
+    }
+
+    .back-to-site:hover {
+      color: var(--azul-profundo);
+    }
+
     .dashboard-header {
       display: flex;
       justify-content: space-between;
@@ -541,6 +557,7 @@
   <div class="portal-container">
     <!-- Tela de Login -->
     <div class="login-screen" id="loginScreen">
+      <a href="index.html" class="back-to-site">← Voltar para o site</a>
       <h1>Portal Empresa</h1>
       <p>Faça login para acessar o sistema de orçamentos</p>
       <form id="loginForm">
