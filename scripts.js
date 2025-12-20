@@ -27,7 +27,11 @@ const setupScrollButtons = () => {
     btn.addEventListener("click", () => {
       const target = document.querySelector(btn.dataset.scroll);
       if (target) {
-        target.scrollIntoView({ behavior: "smooth", block: "start" });
+        target.scrollIntoView({ 
+          behavior: "smooth", 
+          block: "start",
+          inline: "nearest"
+        });
       }
     });
   });
@@ -75,7 +79,10 @@ const setupObserver = () => {
         }
       });
     },
-    { threshold: 0.25 }
+    { 
+      threshold: 0.15,
+      rootMargin: '0px 0px -50px 0px'
+    }
   );
   items.forEach((item) => observer.observe(item));
 };

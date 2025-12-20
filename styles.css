@@ -62,10 +62,11 @@ img {
 main {
   display: flex;
   flex-direction: column;
-  gap: min(4vw, 60px);
+  gap: min(3vw, 50px);
   padding-top: clamp(90px, 10vw, 140px);
   width: min(1200px, 100%);
   margin: 0 auto;
+  scroll-behavior: smooth;
 }
 
 .stack-card {
@@ -77,7 +78,7 @@ main {
   position: relative;
   overflow: hidden;
   transform: translateY(calc(var(--stack-index, 1) * 6px));
-  transition: transform 0.6s ease, box-shadow 0.6s ease;
+  transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.8s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1);
   scroll-snap-align: start;
 }
 
@@ -248,8 +249,10 @@ main {
 }
 
 .logo-showcase__img {
-  width: 70%;
+  width: clamp(200px, 38vw, 320px);
   height: auto;
+  margin: 0 auto 24px;
+  display: block;
   filter: drop-shadow(0 12px 25px rgba(10, 34, 79, 0.25));
 }
 
@@ -667,15 +670,25 @@ footer {
   position: fixed;
   bottom: 24px;
   right: 24px;
-  padding: 14px 22px;
-  border-radius: 999px;
+  padding: 16px;
+  border-radius: 50%;
   background: linear-gradient(135deg, #25d366, #128c7e);
-  color: var(--preto);
+  color: var(--branco);
   font-weight: 700;
   text-decoration: none;
   box-shadow: 0 18px 35px rgba(18, 140, 126, 0.4);
   z-index: 15;
   animation: whatsappPing 3s infinite;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+}
+
+.floating-whatsapp svg {
+  width: 28px;
+  height: 28px;
 }
 
 .intro {
@@ -844,7 +857,8 @@ footer {
 
 [data-animate] {
   opacity: 0;
-  transform: translateY(24px);
+  transform: translateY(30px);
+  transition: opacity 0.9s cubic-bezier(0.4, 0, 0.2, 1), transform 0.9s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 [data-animate].is-visible {
@@ -856,8 +870,21 @@ footer {
   transform: translateY(-20px);
 }
 
+[data-animate="fade-down"].is-visible {
+  transform: translateY(0);
+}
+
+[data-animate="fade-up"] {
+  transform: translateY(30px);
+}
+
+[data-animate="fade-up"].is-visible {
+  transform: translateY(0);
+}
+
 [data-animate="scale-in"] {
-  transform: scale(0.97);
+  transform: scale(0.96);
+  transition: opacity 0.9s cubic-bezier(0.4, 0, 0.2, 1), transform 0.9s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 [data-animate="scale-in"].is-visible {
@@ -1114,7 +1141,8 @@ footer {
 
   main {
     scroll-snap-type: y proximity;
-    gap: 40px;
+    gap: 32px;
+    scroll-padding-top: 100px;
   }
 
   .stack-card {
